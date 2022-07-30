@@ -24,10 +24,10 @@ var Terminal = Terminal || function (cmdLineContainer, outputContainer) {
   const CMDS_ = [
     '<span class="sys">[help]</span>' + ' List of commands' + ' ' + '<span class="highlight"> ALIAS: commands, cmds</span>',
     '<span class="sys">[version]</span>' + ' Display version number' + ' ' + '<span class="highlight"> ALIAS: git</span>',
-    '<span class="sys">[developer]</span>' + ' The developer of the project',
     '<span class="sys">[repository]</span>' + ' Check the repository of the project' + ' ' + '<span class="highlight"> ALIAS: repo</span>',
-    '<span class="sys">[say] (value)</span>' + ' The key to gaining bitches',
+    '<span class="sys">[say] (value)</span>' + ' Make the terminal say something',
     '<span class="sys">[clear]</span>' + ' Clears the terminal' + ' ' + '<span class="highlight"> ALIAS: purge</span>',
+    '<span class="sys">[credits]</span>' + ' Credits',
 
   ];
 
@@ -118,11 +118,11 @@ var Terminal = Terminal || function (cmdLineContainer, outputContainer) {
 
         case 'repo':
           var url = args.join(' ');
-          output('<span class="sys">[SYSTEM]</span>' + ' https://github.com/Naibuu/bitches');
+          output('<span class="sys">[SYSTEM]</span>' + ' https://github.com/ItzMarni/RetardTerminal');
           break;
         case 'repository':
           var url = args.join(' ');
-          output('<span class="sys">[SYSTEM]</span>' + ' https://github.com/Naibuu/bitches');
+          output('<span class="sys">[SYSTEM]</span>' + ' https://github.com/ItzMarni/RetardTerminal');
           break;
 
 
@@ -134,14 +134,6 @@ var Terminal = Terminal || function (cmdLineContainer, outputContainer) {
           break;
         case 'version':
           output('<span class="sys">[SYSTEM]</span>' + ' Retard Terminal v1.0.1');
-          break;
-
-
-        /* Developer */
-
-
-        case 'developer':
-          output('<span class="sys">[HS50]</span> ' + "What's up! I'm the developer of this project, if you're looking to see more of my stupid creations. Be sure to visit my github page! It's listed in the bottom right corner");
           break;
 
 
@@ -157,7 +149,7 @@ var Terminal = Terminal || function (cmdLineContainer, outputContainer) {
           this.value = '';
           return;
 
-        
+
         /* Say */
 
 
@@ -165,7 +157,14 @@ var Terminal = Terminal || function (cmdLineContainer, outputContainer) {
           output('<span class="sys">[SYSTEM]</span>' + ' ' + args.join(' '));
           break;
 
-          
+
+        /* Credits */
+
+        case 'credits':
+          output('<span class="sys">[SYSTEM]</span>' + ' Made by github.com/Naibuu, edited by: github.com/ItzMarni');
+          break;
+
+
         /* Help */
 
 
@@ -229,3 +228,5 @@ var Terminal = Terminal || function (cmdLineContainer, outputContainer) {
     );
   }
 };
+
+// Good luck.
